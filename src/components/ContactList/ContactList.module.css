@@ -1,0 +1,13 @@
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgba(245, 245, 230, 0.7);
+}
+
+.contactItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
