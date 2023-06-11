@@ -4,6 +4,7 @@ import css from './ContactForm.module.css';
 import { useDispatch } from 'react-redux';
 import { addContact } from 'redux/contacts/operations';
 import { useContacts } from 'hooks';
+import Button from '@mui/material/Button';
 
 const contactSchema = object({
   name: string().required(),
@@ -26,8 +27,6 @@ export const ContactForm = () => {
       alert('Contact is already exist');
       return;
     }
-    // console.log(values);
-    // dispatch(addContact({ ...values }));
     dispatch(addContact({ ...values }));
     actions.resetForm();
   };
@@ -49,7 +48,9 @@ export const ContactForm = () => {
           <Field name="number" type="text" />
         </label>
         <ErrorMessage component="div" name="number" />
-        <button type="submit">Add contact</button>
+        <Button variant="contained" type="submit">
+          Add contact
+        </Button>
       </Form>
     </Formik>
   );

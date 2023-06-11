@@ -3,6 +3,8 @@ import { setFilter } from 'redux/contacts/filterSlice';
 import { deleteContact } from 'redux/contacts/operations';
 import { useDispatch } from 'react-redux';
 import { useFilteredContacts } from 'hooks';
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 export const ContactList = () => {
   const dispatch = useDispatch();
@@ -19,9 +21,14 @@ export const ContactList = () => {
           <li className={css.contactItem} key={id}>
             <span>{name}: </span>
             <span>{number} </span>
-            <button className={css.button} onClick={() => onDeleteContact(id)}>
+            <Button
+              className={css.buttonDelete}
+              variant="outlined"
+              startIcon={<DeleteIcon />}
+              onClick={() => onDeleteContact(id)}
+            >
               Delete
-            </button>
+            </Button>
           </li>
         );
       })}

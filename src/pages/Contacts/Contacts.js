@@ -8,6 +8,7 @@ import { Loader } from '../../components/Loader/Loader';
 import { ToastContainer, toast } from 'react-toastify';
 import { useError, useFilter, useFilteredContacts, useIsLoading } from 'hooks';
 import css from './Contacts.module.css';
+import { Typography } from '@mui/material';
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -29,7 +30,9 @@ export default function Contacts() {
 
   return (
     <main className={css.main}>
-      <h1>Phonebook</h1>
+      <Typography variant="h4" component="h4">
+        Контакти колаборантів
+      </Typography>
       <ContactForm />
       <h2>Contacts</h2>
       <Filter />
@@ -42,4 +45,4 @@ export default function Contacts() {
       <ToastContainer />
     </main>
   );
-};
+}
