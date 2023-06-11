@@ -17,7 +17,7 @@ export default function UserMenu() {
         startIcon={<LogoutIcon />}
         onClick={() => dispatch(logOut())}
       >
-        Logout
+        Вихід
       </Button>
     </div>
   );

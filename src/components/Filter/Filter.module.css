@@ -1,3 +1,13 @@
 .labelFilter {
   font-weight: 600;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputFilter {
+  height: 35px;
+  width: 170px;
+  padding: 0 5px;
 }

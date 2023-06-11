@@ -9,12 +9,12 @@ export const Filter = () => {
   return (
     <div>
       <label className={css.labelFilter}>
-        {' '}
-        Filter by name
+        Фільтр за ім'ям зрадника
         <input
+          className={css.inputFilter}
           value={filter}
           onChange={event => dispatch(setFilter(event.target.value))}
-        ></input>{' '}
+        ></input>
       </label>
     </div>
   );

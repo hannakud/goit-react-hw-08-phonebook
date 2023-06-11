@@ -25,10 +25,10 @@ export const RegisterForm = () => {
       <Card className={css.card}>
         <form onSubmit={handleSubmit} autoComplete="off">
           <Typography variant="h4" component="h4">
-            Регістрація
+            Реєстрація
           </Typography>
           <label className={css.label}>
-            <TextField label="Username" type="username" name="username" />
+            <TextField label="Username" type="username" name="name" />
           </label>
           <label className={css.label}>
             <TextField label="Пошта" type="email" name="email" />
@@ -36,7 +36,9 @@ export const RegisterForm = () => {
           <label className={css.label}>
             <TextField label="Пароль" type="password" name="password" />
           </label>
-          <Button variant="contained">Register</Button>
+          <Button variant="contained" type="submit">
+            Register
+          </Button>
         </form>
       </Card>
     </div>

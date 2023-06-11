@@ -32,26 +32,29 @@ export const ContactForm = () => {
   };
 
   return (
-    <Formik
-      initialValues={{ name: '', number: '' }}
-      validationSchema={contactSchema}
-      onSubmit={onAddContact}
-    >
-      <Form>
-        <label className={css.labelForm}>
-          <span>Name</span>
-          <Field name="name" type="text" />
-        </label>
-        <ErrorMessage component="div" name="name" />
-        <label className={css.labelForm}>
-          <span>Phone</span>
-          <Field name="number" type="text" />
-        </label>
-        <ErrorMessage component="div" name="number" />
-        <Button variant="contained" type="submit">
-          Add contact
-        </Button>
-      </Form>
-    </Formik>
+    <div className={css.formWrapper}>
+      {' '}
+      <Formik
+        initialValues={{ name: '', number: '' }}
+        validationSchema={contactSchema}
+        onSubmit={onAddContact}
+      >
+        <Form>
+          <label className={css.labelForm}>
+            <span>Ім'я</span>
+            <Field name="name" type="text" />
+          </label>
+          <ErrorMessage component="div" name="name" />
+          <label className={css.labelForm}>
+            <span>Телефон</span>
+            <Field name="number" type="text" />
+          </label>
+          <ErrorMessage component="div" name="number" />
+          <Button variant="contained" type="submit">
+            Додати колаборанта
+          </Button>
+        </Form>
+      </Formik>
+    </div>
   );
 };

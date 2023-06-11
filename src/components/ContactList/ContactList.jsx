@@ -27,7 +27,7 @@ export const ContactList = () => {
               startIcon={<DeleteIcon />}
               onClick={() => onDeleteContact(id)}
             >
-              Delete
+              Видалити
             </Button>
           </li>
         );

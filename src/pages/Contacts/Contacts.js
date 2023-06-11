@@ -30,11 +30,13 @@ export default function Contacts() {
 
   return (
     <main className={css.main}>
-      <Typography variant="h4" component="h4">
+      <Typography variant="h4" component="h4" className={css.collabs}>
         Контакти колаборантів
       </Typography>
       <ContactForm />
-      <h2>Contacts</h2>
+      <Typography variant="h4" component="h4" className={css.collabs}>
+        Список колаборантів
+      </Typography>
       <Filter />
       {isLoading && !error && <Loader />}
       {filteredContactsList.length ? (

@@ -5,3 +5,9 @@
 .navitem {
   margin-right: 20px;
 }
+
+.register,
+.login {
+  text-decoration: none;
+  color: white;
+}
