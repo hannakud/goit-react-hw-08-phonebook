@@ -2,12 +2,12 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import { object, string } from 'yup';
 import css from './ContactForm.module.css';
 import { useDispatch } from 'react-redux';
-import { addContact } from 'redux/operations';
+import { addContact } from 'redux/contacts/operations';
 import { useContacts } from 'hooks';
 
 const contactSchema = object({
   name: string().required(),
-  phone: string()
+  number: string()
     .matches(
       /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/,
       'Phone number must be digits and can contain spaces, dashes, parentheses and can start with +'
@@ -34,7 +34,7 @@ export const ContactForm = () => {
 
   return (
     <Formik
-      initialValues={{ name: '', phone: '' }}
+      initialValues={{ name: '', number: '' }}
       validationSchema={contactSchema}
       onSubmit={onAddContact}
     >
@@ -46,9 +46,9 @@ export const ContactForm = () => {
         <ErrorMessage component="div" name="name" />
         <label className={css.labelForm}>
           <span>Phone</span>
-          <Field name="phone" type="text" />
+          <Field name="number" type="text" />
         </label>
-        <ErrorMessage component="div" name="phone" />
+        <ErrorMessage component="div" name="number" />
         <button type="submit">Add contact</button>
       </Form>
     </Formik>

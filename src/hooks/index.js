@@ -1,7 +1,8 @@
-export { useFilter } from './useFilter';
 export {
-  useContacts,
-  useFilteredContacts,
-  useIsLoading,
   useError,
+  useContacts,
+  useIsLoading,
+  useFilteredContacts,
 } from './useContacts';
+export { useAuth } from './useAuth';
+export { useFilter } from './useFilter';

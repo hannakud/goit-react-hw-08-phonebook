@@ -2,7 +2,7 @@ import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { toast } from 'react-toastify';
 
-axios.defaults.baseURL = 'https://6475d692e607ba4797dcb747.mockapi.io/';
+// axios.defaults.baseURL = 'https://6475d692e607ba4797dcb747.mockapi.io/';
 
 const ERRORS = {
   LOAD: 'Load contact error',

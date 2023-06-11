@@ -4,7 +4,7 @@ body {
   font-family: arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url('https://img.freepik.com/premium-photo/concept-contact-us-blank-wooden-cubes-square-dice-with-symbol-email-telephone-address-placed-wood-background_44868-1254.jpg?w=2000')
+  background: url('https://www.5.ua/media/pictures/original/257934.jpg?t=1666350981')
     0px 0px / cover no-repeat fixed rgb(222, 226, 255);
   overflow-x: hidden;
   margin: 0px auto;
@@ -45,4 +45,8 @@ button:hover {
 button:focus {
   border-color: #4285f4;
   outline: none;
+}
+
+ul {
+  list-style: none;
 }

@@ -1,0 +1,7 @@
+.navlist {
+  display: flex;
+}
+
+.navitem {
+  margin-right: 20px;
+}
