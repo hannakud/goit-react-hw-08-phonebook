@@ -28,13 +28,21 @@ export const RegisterForm = () => {
             Реєстрація
           </Typography>
           <label className={css.label}>
-            <TextField label="Username" type="username" name="name" />
+            <TextField label="Username" type="username" name="name" required />
           </label>
           <label className={css.label}>
-            <TextField label="Пошта" type="email" name="email" />
+            <TextField label="Пошта" type="email" name="email" required />
           </label>
           <label className={css.label}>
-            <TextField label="Пароль" type="password" name="password" />
+            <TextField
+              label="Пароль"
+              type="password"
+              name="password"
+              autoComplete="current-password"
+              inputProps={{ minLength: 7 }}
+              variant="standard"
+              required
+            />
           </label>
           <Button variant="contained" type="submit">
             Register
